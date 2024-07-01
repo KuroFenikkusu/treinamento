@@ -92,16 +92,16 @@ def play_game():
         pixels.append([x, y])
         if len(pixels) > size_snake:
             del pixels[0]
-        #
+        # snake bateu na própria snake
         for pixel in pixels[:-1]:
             if pixel  == [x, y]:
                 fim_jogo = True
         #
         draw_snake(size_square, pixels)
-        # Posicionamento
+       # snake bateu na wall
         if x < 0 or x >= largura or y < 0 or y >= altura:
             fim_jogo = True
-            
+
         x += speed_x
         y += speed_y
 
@@ -116,12 +116,4 @@ def play_game():
         pygame.display.update()
         relogio.tick(speed_game)
 # criar a logica de terminar o jogo
-# o que acontece:
-# snake bateu na wall
-# snake bateu na própria snake
-
-# pegar as iterações do usuario
-# fechou a tela
-# apertou os as teclas de movimentação
-
 play_game()
