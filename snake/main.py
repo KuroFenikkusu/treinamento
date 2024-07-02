@@ -19,7 +19,6 @@ vermelho = (255, 0, 0)
 verde = (0, 255, 0)
 
 # parametros snake
-
 size_square = 20
 speed_game = 15
 
@@ -80,9 +79,6 @@ def play_game():
             elif event.type == pygame.KEYDOWN:
                 speed_x, speed_y = select_speed(event.key)
 
-# criar um loop infinito
-
-
 # desenhar os objetos do jogo na tela
         # score
         draw_points(size_snake -1)
@@ -115,5 +111,5 @@ def play_game():
         # atualizar tela
         pygame.display.update()
         relogio.tick(speed_game)
-# criar a logica de terminar o jogo
+
 play_game()
